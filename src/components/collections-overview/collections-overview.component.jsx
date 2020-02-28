@@ -3,16 +3,14 @@ import React from 'react';
 
 import CollectionPreview from '../collection-preview/collection-preview.component';
 
-
-
-import './collections-overview.styles.scss';
+import { CollectionsOverviewContainer } from './collections-overview.styles';
 
 const CollectionsOverview = ({ collections }) => (
-  <div className='collections-overview'>
-    {collections.map(({ id, ...otherCollectionProps }) => (
-      <CollectionPreview key={id} {...otherCollectionProps} />
-    ))}
-  </div>
+  <CollectionsOverviewContainer>
+  {collections.map(({ id, ...otherCollectionProps }) => (
+    <CollectionPreview key={id} {...otherCollectionProps} />
+  ))}
+</CollectionsOverviewContainer>
 );
 
 
