@@ -3,19 +3,21 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
-  authDomain: 'crwn-db.firebaseapp.com',
-  databaseURL: 'https://crwn-db.firebaseio.com',
-  projectId: 'crwn-db',
-  storageBucket: 'crwn-db.appspot.com',
-  messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
+    apiKey: "AIzaSyDnq3-chKvaquOGU_kIjAj7JAMxBdLKre0",
+    authDomain: "crwn-db-64e9f.firebaseapp.com",
+    databaseURL: "https://crwn-db-64e9f.firebaseio.com",
+    projectId: "crwn-db-64e9f",
+    storageBucket: "crwn-db-64e9f.appspot.com",
+    messagingSenderId: "7023792399",
+    appId: "1:7023792399:web:ad89acadfaa9c63fb96e7a",
+    measurementId: "G-FRP7B7NFPR"
 };
 
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
+  
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 
